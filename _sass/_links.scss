@@ -1,0 +1,104 @@
+.link,
+.bar {
+  color: $grey_dk;
+  display: inline-block;
+  font-weight: bold;
+  font-family: $helvetica;
+  line-height: 1;
+  position: relative;
+  text-decoration: none;
+}
+.link.text-white,
+.bar.text-white {
+  color: $white_not;
+}
+.link:after,
+.bar:after {
+  background: $grey_dk;
+  content: '';
+  left: 0;
+  height: .1875em;
+  position: absolute;
+  top: -.1875em;
+  transition: background $transition-short;
+  width: 100%;
+}
+.link:hover:after {
+  background: $yellow !important;
+}
+.link-inline,
+.bar-inline {
+  margin: 0 .125*$em;
+}
+.bar.bar-black:after,
+.link.bar-black:after {
+  background: $grey_dk;
+}
+.bar.bar-white:after,
+.link.bar-white:after {
+  background: $white_not;
+}
+.bar.bar-yellow:after,
+.link.bar-yellow:after {
+  background: $yellow;
+}
+
+.bar.bar-hover-black:hover:after,
+.link.bar-hover-black:hover:after {
+  background: $grey_dk !important;
+}
+.bar.bar-hover-white:hover:after,
+.link.bar-hover-white:hover:after {
+  background: $white !important;
+}
+.bar.bar-hover-yellow:hover:after,
+.link.bar-hover-yellow:hover:after {
+  background: $yellow !important;
+}
+
+.link-inline {
+  font-size: $em;
+}
+.link[target^="blank"],
+.link[target^="_blank"],
+.external {
+  padding-left: 1.414*$em;
+  &:before {
+    background-image: url('../assets/images/icons/external_link_grey_dk.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 1.414*$em;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background $transition-short;
+    width: $em;
+  }
+  &:hover:before {
+    background-image: url('../assets/images/icons/external_link_yellow.svg');
+  }
+}
+a.social {
+  background: $white_not;
+  border: .3535*$em solid $grey_lt;
+  border-radius: 50%;
+  color: $white_not;
+  display: block;
+  height: 2.121*$em;
+  position: relative;
+  transition: border-color $transition-short;
+  width: 2.121*$em;
+  svg {
+    fill: $grey_dk;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  &:hover {
+    border-color: $yellow;
+  }
+}

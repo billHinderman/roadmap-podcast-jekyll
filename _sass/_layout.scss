@@ -1,0 +1,36 @@
+.wrapper-s,
+.wrapper,
+.wrapper-xl,
+.wrapper-max {
+  padding: 2*$em $em;
+  margin: auto;
+  width: 100%;
+}
+.wrapper-s {
+  max-width: 50*$em;  //800
+}
+.wrapper {
+  max-width: 64*$em;  //1024
+}
+.wrapper-xl {
+  max-width: $xl;  //1280
+}
+.wrapper-max {
+  padding: 0 2*$em;
+  margin: 2*$em auto;
+}
+.wrapper-thick {
+  padding: 5.656*$em 0;
+  margin: auto;
+  width: 100%;
+}
+.align-center {
+  text-align: center;
+}
+
+p + *,
+ul + p,
+img + p,
+object + p {
+  margin-top: 1.414*$em;
+}

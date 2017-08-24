@@ -1,0 +1,134 @@
+figure {
+  width: 100%;
+}
+figure.full {
+  @media screen and (min-width: $l-xl) {
+    margin-left: -1*$em;
+    width: $l-xl;
+  }
+  @media screen and (min-width: $xl) {
+    margin-left: -9*$em;
+    width: $xl;
+  }
+}
+figure.pull-left {
+  @media screen and (min-width: $m-l) {
+    float: left;
+    margin-left: -1*$em;
+    margin-right: 2.828*$em;
+    width: 50%;
+  }
+  @media screen and (min-width: $xl) {
+    margin-left: -9*$em;
+  }
+}
+figure.pull-right {
+  @media screen and (min-width: $m-l) {
+    float: right;
+    margin-left: 2.828*$em;
+    margin-right: -1*$em;
+    width: 50%;
+  }
+  @media screen and (min-width: $xl) {
+    margin-right: -9*$em;
+  }
+}
+.episode-card-list {
+  @include align-items(flex-start);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: $s;
+  padding: 0 .5*$em;
+  width: 100%;
+  @media screen and (min-width: $m) {
+    max-width: $m;
+  }
+  @media screen and (min-width: $l) {
+    max-width: $l;
+  }
+  @media screen and (min-width: $xl) {
+    max-width: $xl;
+  }
+}
+figure.episode-card {
+  background: $black;
+  box-shadow: $shadow-standard;
+  color: $white_off;
+  font-family: $helvetica;
+  font-weight: bold;
+  overflow: hidden;
+  height: $s-padded;
+  margin: .5*$em;
+  padding: $em;
+  position: relative;
+  transition: all $transition-short;
+  width:$s-padded;
+  &:hover,
+  &:active {
+    background: $yellow;
+    box-shadow: $shadow-highlight;
+    color: $black;
+    transform: scale(1.025);
+    .text-highlight {
+      color: $white;
+    }
+    img.default {
+      opacity: 0;
+    }
+    img.hover {
+      opacity: 1;
+    }
+  }
+  * {
+    margin: 0;
+  }
+  a {
+    @include align-items(center);
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+    font-style: inherit;
+    color: inherit;
+    height: $s-padded;
+    left: 0;
+    position: absolute;
+    text-decoration: inherit;
+    top: 0;
+    width:$s-padded;
+  }
+  h2 {
+    font-size: $em;
+  }
+  .image-container {
+    margin: .5*$em;
+    height: 12*$em;
+    position: relative;
+    width: 12*$em;
+  }
+  img {
+    position: absolute;
+    transition: opacity $transition-short;
+    &.default {
+      opacity: 1;
+    }
+    &.hover {
+      opacity: 0;
+    }
+  }
+  .episode-info {
+    border-top: 4px solid $white_off;
+    bottom: 0;
+    font-family: $helvetica;
+    font-size: .707*$em;
+    padding: $em;
+    position: absolute;
+    text-align: right;
+    width: 100%;
+  }
+  .text-highlight {
+    transition: all $transition-short;
+  }
+}

@@ -1,0 +1,13 @@
+<figure class="episode-card">
+  <a href="{{ include.episode.url }}">
+    <div class="image-container">
+      <img class="default" src="/assets/images/logo_for_black.svg"/>
+      <img class="hover" src="/assets/images/logo_for_color.svg"/>
+    </div>
+    {% assign zeroLength = 3 | minus: include.episode.number.size %}
+    <h2>{% for position in (1..zeroLength) %}0{% endfor %}</span><span class="text-highlight">{{ include.episode.number }}</span>: {{ include.episode.title }}</h2>
+
+    <!-- <p class="guest-info">{{ include.episode.guest_info | join: " | " }}</p> -->
+    <!-- <p class="episode-info">{{ include.episode.date | date: "%B %-d, %Y"}}</p> -->
+  </a>
+</figure>

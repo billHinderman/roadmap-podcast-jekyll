@@ -1,31 +1,8 @@
 ---
 layout: default
+permalink: "/episodes/"
 ---
-
-<div class="wrapper-xl">
-<img src="/assets/images/logo_for_white.svg" height="192" width="192"/>
-<h1>
-  <span>Road</span><span class="text-yellow">map</span>
-</h1>
-
-How did we get here?
-Where are we going?
-
-The world’s first podcast about design and an inquiry into the broader world of creative culture through wide-ranging conversations with designers, writers, artists, curators, musicians, and other luminaries of contemporary thought / 264 Episodes Available
-
 <div>
-Latest episode:
-{% assign newest_episdode = site.episodes.last %}
-{% include episode-card.html
-  episode=newest_episdode
-%}
-</div>
-
-</div>
-
-
-<div>
-Previous episodes:
 <ul class="episode-card-list">
   {% for episode in site.episodes reversed %}
     {% unless forloop.first %}

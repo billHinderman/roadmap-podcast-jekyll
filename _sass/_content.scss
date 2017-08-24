@@ -1,0 +1,60 @@
+.page-main {
+  font-size: 1.414*$em;
+  position: relative;
+  z-index: 0;
+}
+.page-main > :first-child {
+  padding-top: 2.828*$em;
+}
+
+p {
+  font-size: 1.414*$em;
+  line-height: 1.44;
+}
+p + p,
+p + ul,
+ul + p,
+p + section,
+section + p,
+p + figure,
+figure + p {
+  margin-top: 2.828*$em;
+}
+
+.post-date {
+  display: block;
+  font-family: $helvetica;
+  font-size: .5*$em;
+  font-weight: bold;
+  margin-bottom: -6px;
+}
+
+.comments {
+  margin: auto;
+  max-width: 800px;
+  overflow-y: hidden;
+  padding: 8*$em 0 0;
+}
+#disqus_thread {
+  margin-bottom: -40px;
+}
+#share {
+  padding: 4.242*$em 2*$em 0;
+  text-align: center;
+  li {
+    display: inline-block;
+    padding: 0 .707*$em;
+    @media screen and (min-width: $s-m) {
+      padding: 0 1.414*$em;
+    }
+    @media screen and (min-width: $m) {
+      padding: 0 2.828*$em;
+    }
+    @media screen and (min-width: $l) {
+      padding: 0 3.535*$em;
+    }
+    @media screen and (min-width: $xl) {
+      padding: 0 4.242*$em;
+    }
+  }
+}
